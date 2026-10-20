@@ -50,6 +50,7 @@ button { cursor: pointer; }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
+.nowrap { white-space: nowrap; }
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
 .section { padding-block: var(--sp-7); }
 .section--alt { background: var(--c-surface-2); }
