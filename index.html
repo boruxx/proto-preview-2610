@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Библиотека искусств им.&nbsp;А.&nbsp;П.&nbsp;Боголюбова&nbsp;— черновик редизайна</title>
+<meta name="description" content="Библиотека искусств им.&nbsp;А.&nbsp;П.&nbsp;Боголюбова: афиша, каталог, услуги, режим работы.">
+<meta name="theme-color" content="#263b77">
+<!-- ЧЕРНОВИК РЕДИЗАЙНА. Не&nbsp;для публикации. Данные&nbsp;— примеры. -->
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к&nbsp;содержимому</a>
+<div class="topbar">
+  <div class="container topbar__inner">
+    <p class="topbar__status" style="margin:0">Детский отдел сегодня до&nbsp;21:00 <span class="visually-hidden">(пример)</span></p>
+    <div class="topbar__tools">
+      <a class="topbar__phone" href="tel:+74999784938">8 (499) 978-49-38</a>
+      <button class="a11y-toggle" type="button" aria-pressed="false" data-js="a11y-toggle"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Крупный шрифт<span class="a11y-toggle__long"> и&nbsp;контраст</span></span></button>
+    </div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container site-header__row">
+    <a class="site-header__logo" href="index.html" aria-label="Библиотека искусств им.&nbsp;А.&nbsp;П.&nbsp;Боголюбова&nbsp;— на&nbsp;главную">
+      <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="27" fill="#263b77"/><circle cx="28" cy="28" r="22" fill="none" stroke="#ffaf31" stroke-width="2"/><text x="28" y="37" text-anchor="middle" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#fff">Б</text></svg>
+      <span class="site-header__name">Библиотека искусств<br>им.&nbsp;А.&nbsp;П.&nbsp;Боголюбова<small>ГБУК г. Москвы · логотип-заглушка</small></span>
+    </a>
+    <button class="burger site-header__burger" type="button" aria-expanded="false" aria-controls="main-nav" data-js="burger">
+      <span class="burger__icon" aria-hidden="true"></span><span>Меню</span>
+    </button>
+    <div class="site-header__search">
+      <form class="search" role="search" action="https://catalog.example/search" method="get" data-js="search-form" aria-label="Поиск">
+        <div class="search__scopes" role="tablist" aria-label="Где искать">
+          <button class="search__scope" type="button" role="tab" aria-selected="true" tabindex="0" data-scope="catalog" data-action="https://catalog.example/search" data-placeholder="Автор, название, тема">Каталог</button>
+          <button class="search__scope" type="button" role="tab" aria-selected="false" tabindex="-1" data-scope="site" data-action="./" data-placeholder="Поиск по&nbsp;сайту">Сайт</button>
+          <button class="search__scope" type="button" role="tab" aria-selected="false" tabindex="-1" data-scope="afisha" data-action="afisha.html" data-placeholder="Название события, имя лектора">Афиша</button>
+        </div>
+        <input type="hidden" name="scope" value="catalog">
+        <div class="search__box">
+          <label class="visually-hidden" for="q">Поисковый запрос</label>
+          <input class="search__input" id="q" name="q" type="search" autocomplete="off" placeholder="Автор, название, тема">
+          <button class="search__submit" type="submit"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Найти</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
+<nav class="main-nav" id="main-nav" aria-label="Основное меню">
+  <div class="container">
+    <ul class="main-nav__list" role="list">
+      <li class="main-nav__item">
+        <button class="main-nav__toggle" type="button" aria-expanded="false" aria-controls="sub-visit">Посетить</button>
+        <ul class="main-nav__sub" id="sub-visit" role="list"><li><a href="#">Режим работы и&nbsp;адрес</a></li><li><a href="#">Как записаться в&nbsp;библиотеку</a></li><li><a href="#">Залы и&nbsp;пространства</a></li><li><a href="#">Детский отдел</a></li><li><a href="#">Доступная среда</a></li></ul>
+      </li>
+      <li class="main-nav__item"><a class="main-nav__link" href="afisha.html">Афиша</a></li>
+      <li class="main-nav__item">
+        <button class="main-nav__toggle" type="button" aria-expanded="false" aria-controls="sub-catalog">Каталог и&nbsp;ресурсы</button>
+        <ul class="main-nav__sub" id="sub-catalog" role="list"><li><a href="#">Электронный каталог</a></li><li><a href="#">Электронные ресурсы</a></li><li><a href="#">Новые поступления</a></li><li><a href="#">Книга дня</a></li><li><a href="#">Видео</a></li></ul>
+      </li>
+      <li class="main-nav__item">
+        <button class="main-nav__toggle" type="button" aria-expanded="false" aria-controls="sub-services">Услуги</button>
+        <ul class="main-nav__sub" id="sub-services" role="list"><li><a href="#">Аренда залов</a></li><li><a href="#">Справки и&nbsp;консультации</a></li><li><a href="#">Экскурсии для групп</a></li><li><a href="#">Подписка на&nbsp;рассылку</a></li></ul>
+      </li>
+      <li class="main-nav__item"><a class="main-nav__link" href="#">Детям</a></li>
+      <li class="main-nav__item">
+        <button class="main-nav__toggle" type="button" aria-expanded="false" aria-controls="sub-about">О&nbsp;библиотеке</button>
+        <ul class="main-nav__sub" id="sub-about" role="list"><li><a href="#">История и&nbsp;директор</a></li><li><a href="#">Структура</a></li><li><a href="#">Новости</a></li><li><a href="#">Проекты</a></li><li><a href="#">Документы</a></li><li><a href="#">Противодействие коррупции</a></li><li><a href="#">Контакты</a></li></ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main id="main" tabindex="-1">
+<aside class="notice" aria-labelledby="notice-title">
+  <div class="container notice__inner">
+    <svg class="notice__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 7v6M12 16.5v.5"/></svg>
+    <p class="notice__text"><strong id="notice-title">Основное здание на&nbsp;реконструкции.</strong>
+      До&nbsp;декабря мероприятия проходят в&nbsp;Детском отделе: Новослободская ул., д.&nbsp;49/2. <a href="index.html#visit">Как добраться</a></p>
+  </div>
+</aside>
+  <p class="draft-note container" style="margin-block:0">Черновик редизайна. Тексты новостей и&nbsp;событий взяты с&nbsp;текущего сайта как примеры, остальное&nbsp;— заглушки.</p>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <h1 id="hero-title">Библиотека искусств: книги, ноты, лекции и&nbsp;концерты</h1>
+      <p>Найдите издание в&nbsp;каталоге, выберите событие в&nbsp;афише или приходите в&nbsp;читальный зал&nbsp;— всё в&nbsp;два клика.</p>
+      <div class="hero__actions">
+        <a class="btn btn--accent" href="afisha.html">Смотреть афишу</a>
+        <a class="btn btn--ghost" href="#visit">Как нас найти</a>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <h2 class="visually-hidden">Быстрые действия</h2>
+    <ul class="quick" role="list"><li><a class="quick__item" href="afisha.html"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Афиша<small>Ближайшие события</small></a></li><li><a class="quick__item" href="#"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg>Электронный каталог<small>Найти книгу или ноты</small></a></li><li><a class="quick__item" href="#"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h4"/></svg>Записаться<small>Читательский билет</small></a></li><li><a class="quick__item" href="#"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>Аренда залов<small>Через портал mos.ru</small></a></li></ul>
+  </div>
+
+  <section class="section" aria-labelledby="afisha-title">
+    <div class="container">
+      <div class="section__head"><h2 id="afisha-title">Ближайшие события</h2><a href="afisha.html">Вся афиша →</a></div>
+      <ul class="grid grid--2" role="list">
+<li class="event-card" data-type="reg" data-when="today week">
+  <div class="event-card__date" aria-hidden="true"><span class="event-card__day">20</span><span class="event-card__month">окт</span></div>
+  <div class="event-card__body">
+    <p class="event-card__meta"><time datetime="2026-10-20T15:00">20 октября, Вт, 15:00</time></p>
+    <h3 class="event-card__title"><a href="#">Фортепианные транскрипции Ф.&nbsp;Листа на&nbsp;темы из&nbsp;опер Дж.&nbsp;Верди</a></h3>
+    <p class="event-card__place">Отдел «Детская библиотека» (Новослободская ул., д.&nbsp;49/2)</p>
+    <span class="tag">По&nbsp;предварительной записи</span>
+  </div>
+</li>
+<li class="event-card" data-type="mos" data-when="week">
+  <div class="event-card__date" aria-hidden="true"><span class="event-card__day">21</span><span class="event-card__month">окт</span></div>
+  <div class="event-card__body">
+    <p class="event-card__meta"><time datetime="2026-10-21T17:00">21 октября, Ср, 17:00</time></p>
+    <h3 class="event-card__title"><a href="#">«Контрабас и&nbsp;скрипки»</a></h3>
+    <p class="event-card__place">Отдел «Детская библиотека» (Новослободская ул., д.&nbsp;49/2)</p>
+    <span class="tag tag--accent">Билеты на&nbsp;mos.ru</span>
+  </div>
+</li>
+<li class="event-card" data-type="reg" data-when="week">
+  <div class="event-card__date" aria-hidden="true"><span class="event-card__day">22</span><span class="event-card__month">окт</span></div>
+  <div class="event-card__body">
+    <p class="event-card__meta"><time datetime="2026-10-22T15:00">22 октября, Чт, 15:00</time></p>
+    <h3 class="event-card__title"><a href="#">«Если бы Шопен вёл дневник…» Часть седьмая. Последний год</a></h3>
+    <p class="event-card__place">Отдел «Детская библиотека» (Новослободская ул., д.&nbsp;49/2)</p>
+    <span class="tag">По&nbsp;предварительной записи</span>
+  </div>
+</li>
+<li class="event-card" data-type="mos" data-when="week">
+  <div class="event-card__date" aria-hidden="true"><span class="event-card__day">22</span><span class="event-card__month">окт</span></div>
+  <div class="event-card__body">
+    <p class="event-card__meta"><time datetime="2026-10-22T17:00">22 октября, Чт, 17:00</time></p>
+    <h3 class="event-card__title"><a href="#">«Торжество флейт»</a></h3>
+    <p class="event-card__place">Отдел «Детская библиотека» (Новослободская ул., д.&nbsp;49/2)</p>
+    <span class="tag tag--accent">Билеты на&nbsp;mos.ru</span>
+  </div>
+</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="news-title">
+    <div class="container">
+      <div class="section__head"><h2 id="news-title">Новости</h2><a href="#">Все новости →</a></div>
+      <ul class="grid grid--3" role="list">
+<li><article class="news-card">
+  <div class="news-card__media" aria-hidden="true">фото (lazy)</div>
+  <time>7 сентября 2026</time>
+  <h3><a href="#">Выставка «10 лет без Фазиля Искандера» открылась на&nbsp;Гоголевском бульваре</a></h3>
+</article></li>
+<li><article class="news-card">
+  <div class="news-card__media" aria-hidden="true">фото (lazy)</div>
+  <time>8 сентября 2026</time>
+  <h3><a href="#">«Литература в&nbsp;лицах»: выставка к&nbsp;35-летию «Эксмо»</a></h3>
+</article></li>
+<li><article class="news-card">
+  <div class="news-card__media" aria-hidden="true">фото (lazy)</div>
+  <time>4 сентября 2026</time>
+  <h3><a href="#">Владимир Семёнов принял участие в&nbsp;круглом столе «Культура против терроризма»</a></h3>
+</article></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section__head"><h2 id="services-title">Услуги и&nbsp;ресурсы</h2></div>
+      <ul class="grid grid--3" role="list">
+<li class="service"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg><div><h3><a href="#">Аренда залов</a></h3><p>Площадки для частных и&nbsp;корпоративных мероприятий&nbsp;— бронирование на&nbsp;mos.ru.</p></div></li>
+<li class="service"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></svg><div><h3><a href="#">Электронные ресурсы</a></h3><p>Подписные базы и&nbsp;коллекции, доступные читателям библиотеки.</p></div></li>
+<li class="service"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><h3><a href="#">Подписка на&nbsp;рассылку</a></h3><p>Самое интересное из&nbsp;афиши&nbsp;— раз в&nbsp;неделю на&nbsp;почту.</p></div></li>
+<li class="service"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M17 9h4M3 15h4M17 15h4"/></svg><div><h3><a href="#">Видео</a></h3><p>Записи лекций, концертов и&nbsp;презентаций.</p></div></li>
+<li class="service"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="6" r="3"/><path d="M6 21v-5a6 6 0 0 1 12 0v5"/></svg><div><h3><a href="#">Детский отдел</a></h3><p>Пространство для всей семьи: чтение, занятия, события.</p></div></li>
+<li class="service"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h4"/></svg><div><h3><a href="#">Книга дня</a></h3><p>Каждый день&nbsp;— одна книга из&nbsp;фонда с&nbsp;коротким рассказом.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="visit" aria-labelledby="visit-title">
+    <div class="container visit">
+      <div>
+        <h2 id="visit-title">Режим работы и&nbsp;адрес</h2>
+        <div class="place-card">
+          <h3>Библиотека искусств&nbsp;— основное здание</h3>
+          <address>Москва, ул.&nbsp;Сущевская, д.&nbsp;14<br><a href="tel:+74999784938">8 (499) 978-49-38</a></address>
+          <p class="place-card__status"><span class="tag tag--accent">На&nbsp;реконструкции до&nbsp;декабря</span></p>
+          <p class="place-card__muted">Режим работы после открытия&nbsp;— уточнить.</p>
+        </div>
+        <div class="place-card">
+          <h3>Детский отдел</h3>
+          <address>Москва, Новослободская ул., д.&nbsp;49/2</address>
+          <p class="place-card__status"><span class="tag">Временно: здесь проходят все мероприятия</span></p>
+          <table class="hours">
+  <caption class="visually-hidden">Режим работы</caption>
+  <tbody>
+    <tr data-days="2 3 4 5 6"><th scope="row">Вторник&nbsp;— суббота</th><td>10:00–21:00</td></tr>
+    <tr data-days="0"><th scope="row">Воскресенье</th><td>10:00–20:00</td></tr>
+    <tr data-days="1"><th scope="row">Понедельник</th><td>выходной</td></tr>
+  </tbody>
+</table>
+<p style="margin-top:.75rem;font-size:var(--fs-sm)">Последний вторник месяца&nbsp;— санитарный день.</p>
+          <p class="place-card__muted">График взят из&nbsp;подвала текущего сайта, где он указан для Новослободской,&nbsp;49/2; уточнить, что это режим именно Детского отдела.</p>
+        </div>
+      </div>
+      <div class="map-placeholder" role="img" aria-label="Место для карты">Карта (подгружать по&nbsp;клику, а&nbsp;не&nbsp;сразу&nbsp;— экономия трафика)</div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <section aria-labelledby="f-contacts">
+        <h2 id="f-contacts">Библиотека искусств им.&nbsp;А.&nbsp;П.&nbsp;Боголюбова</h2>
+        <p>Государственное бюджетное учреждение культуры города Москвы</p>
+        <address style="font-style:normal">Москва, ул.&nbsp;Сущевская, д.&nbsp;14<br><a href="tel:+74999784938">8 (499) 978-49-38</a></address>
+        <p style="margin-top:.75rem">Детский отдел: Новослободская ул., д.&nbsp;49/2</p>
+      </section>
+      <nav aria-labelledby="f-visit"><h2 id="f-visit">Посетителям</h2>
+        <ul><li><a href="#">Режим работы</a></li><li><a href="#">Как записаться</a></li><li><a href="afisha.html">Афиша</a></li><li><a href="#">Детский отдел</a></li></ul></nav>
+      <nav aria-labelledby="f-res"><h2 id="f-res">Ресурсы</h2>
+        <ul><li><a href="#">Электронный каталог</a></li><li><a href="#">Электронные ресурсы</a></li><li><a href="#">Видео</a></li><li><a href="#">Подписка на&nbsp;рассылку</a></li></ul></nav>
+      <nav aria-labelledby="f-about"><h2 id="f-about">О&nbsp;библиотеке</h2>
+        <ul><li><a href="#">Структура</a></li><li><a href="#">Документы</a></li><li><a href="#">Противодействие коррупции</a></li><li><a href="#">Политика конфиденциальности</a></li><li><a href="#">Контакты</a></li></ul></nav>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="site-footer__partners" aria-label="Партнёры">
+        <span class="partner-ph">Логотип ДКМ (заглушка)</span><span class="partner-ph">Культура Москвы (заглушка)</span><span class="partner-ph">Соцсети (заглушка)</span>
+      </div>
+      <p style="margin:0">© Библиотека искусств им.&nbsp;А.&nbsp;П.&nbsp;Боголюбова · черновик редизайна</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

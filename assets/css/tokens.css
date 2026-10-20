@@ -1,0 +1,60 @@
+/* =========================================================
+   Дизайн-токены — Библиотека искусств им. А. П. Боголюбова
+   Черновик редизайна 2026. Цвета бренда взяты из текущего
+   main_n.css: синий #263b77 (заголовки h2, логотип),
+   оранжевый #ffaf31 (h1, плашки слайдера).
+   Контраст проверен по WCAG 2.2 AA (значения в комментариях).
+   ========================================================= */
+:root {
+  /* --- Бренд --- */
+  --c-brand: #263b77;          /* белый текст на нём 10.6:1 */
+  --c-brand-strong: #1a2a58;   /* hover/active */
+  --c-brand-soft: #e9edf7;     /* фон плашек */
+  --c-accent: #ffaf31;         /* ТОЛЬКО фон/декор; на синем 5.8:1, на белом 1.8:1 — текстом на белом не использовать */
+  --c-accent-ink: #8a4f00;     /* «оранжевый» для текста на белом, 6.6:1 */
+
+  /* --- Нейтральные --- */
+  --c-text: #1f2430;           /* 15.5:1 на белом */
+  --c-text-muted: #5a6070;     /* 6.3:1 на белом, 5.8:1 на --c-surface-2 */
+  --c-bg: #ffffff;
+  --c-surface-2: #f4f5f7;      /* из текущего сайта */
+  --c-border: #d5d9e2;
+  --c-focus: #ffaf31;          /* кольцо фокуса + синяя обводка (двойное) */
+  --c-danger: #b3261e;
+  --c-success: #1e6b3a;
+
+  /* --- Типографика: системные шрифты, без загрузки ---
+     При желании можно подключить один variable-шрифт
+     (например, PT Sans/Golos), self-hosted, font-display:swap. */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "PT Sans", Arial, sans-serif;
+  --font-serif: "PT Serif", Georgia, "Times New Roman", serif;
+
+  /* fluid-шкала: мобильный → десктоп */
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1.0625rem;                               /* 17px — удобное чтение */
+  --fs-lg: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --fs-xl: clamp(1.375rem, 1.1rem + 1vw, 1.875rem);
+  --fs-2xl: clamp(1.75rem, 1.3rem + 2vw, 2.75rem);
+  --lh-tight: 1.2;
+  --lh-base: 1.55;
+
+  /* --- Отступы (шаг 4px) --- */
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-5: 1.5rem;  --sp-6: 2rem;   --sp-7: 3rem;    --sp-8: 4rem;
+
+  /* --- Прочее --- */
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-pill: 999px;
+  --shadow-1: 0 1px 2px rgb(16 24 40 / .06), 0 1px 3px rgb(16 24 40 / .10);
+  --shadow-2: 0 4px 12px rgb(16 24 40 / .10);
+  --container: 1200px;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --tap: 44px;                 /* минимальная зона касания (WCAG 2.5.8 требует 24px, берём с запасом) */
+  --dur: 160ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+}
