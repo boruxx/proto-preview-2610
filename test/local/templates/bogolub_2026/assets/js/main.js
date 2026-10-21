@@ -204,4 +204,46 @@
     var empty = document.querySelector('[data-js="results-empty"]');
     if (empty) empty.hidden = n !== 0;
   }
+
+  /* ---------- 8. Закреплённая шапка (ред. 21.10.2026) ----------
+     Сама шапка — CSS position: sticky (работает и без JS). Здесь:
+     высота шапки → --head-h (scroll-padding-top: якоря и фокус не
+     прячутся под шапкой), тень после начала прокрутки, лупа на телефоне. */
+  var head = document.querySelector('[data-js="site-head"]');
+  var headerRow = head && head.querySelector('.site-header');
+  function measure() {
+    if (!head) return;
+    doc.style.setProperty('--head-h', head.offsetHeight + 'px');
+    if (headerRow) doc.style.setProperty('--head-row-h', headerRow.offsetHeight + 'px');
+  }
+  if (head) {
+    measure();
+    if (window.ResizeObserver) new ResizeObserver(measure).observe(headerRow || head);
+    else window.addEventListener('resize', measure);
+    var onScroll = function () { head.classList.toggle('is-stuck', window.scrollY > 4); };
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  }
+  var sToggle = document.querySelector('[data-js="search-toggle"]');
+  var sWrap = sToggle && document.getElementById(sToggle.getAttribute('aria-controls'));
+  if (sToggle && sWrap) {
+    var syncSearch = function () {
+      if (mqDesktop.matches) sWrap.removeAttribute('data-open');
+      else sWrap.setAttribute('data-open', sToggle.getAttribute('aria-expanded'));
+    };
+    syncSearch();
+    if (mqDesktop.addEventListener) mqDesktop.addEventListener('change', syncSearch);
+    sToggle.addEventListener('click', function () {
+      var open = sToggle.getAttribute('aria-expanded') !== 'true';
+      sToggle.setAttribute('aria-expanded', String(open));
+      syncSearch();
+      if (open) { var inp = sWrap.querySelector('input[type="search"]'); if (inp) inp.focus(); }
+    });
+  }
+  var sJump = document.querySelector('[data-js="search-jump"]');   // главная: к большому поиску
+  if (sJump) sJump.addEventListener('click', function (e) {
+    var inp = document.getElementById(sJump.getAttribute('href').slice(1));
+    if (!inp) return;
+    e.preventDefault(); inp.focus({ preventScroll: true });
+    inp.scrollIntoView({ block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  });
 })();
