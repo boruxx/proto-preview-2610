@@ -32,22 +32,27 @@ a:hover{text-decoration-thickness:2px}
 .tel{font-weight:600;white-space:nowrap;text-decoration:none}
 .a11y{font:inherit;font-size:.875rem;min-height:36px;padding:0 .8rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--brand-s);cursor:pointer}
 @media (max-width:719px){.hd .wrap{padding-block:.4rem .2rem}.logo img{width:124px}.tel{display:none}.nav{order:3;width:100%;justify-content:space-between;margin:0 -.7rem}.a11y{font-size:.8125rem}}
-/* первый экран: фото здания библиотеки (Сущевская, 14) */
+/* первый экран: фото усадьбы Третьякова, ул. Сущевская, 14 (Wikimedia Commons, ViktorJulin, CC BY-SA 4.0) */
 .hero{position:relative;background:var(--bg)}
-.hero__ph{height:clamp(240px,62vw,340px);background:#d9d3c4 url(img/building-800.webp) center 15%/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
+.hero__ph{position:relative;height:clamp(250px,64vw,360px);background:#c9c7bd url(img/street-800.webp) center 40%/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
 .hero .wrap{position:relative;margin-top:-3.5rem;padding-bottom:clamp(1.25rem,4vw,2.5rem)}
 .hero__card{max-width:36rem;padding:clamp(1.1rem,3vw,2rem);background:rgb(251 248 242/.94);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 30px rgb(38 50 31/.12)}
 .hero h1{font-size:clamp(1.75rem,1.2rem + 2.4vw,2.9rem);max-width:15em}
 .hero p{font-size:clamp(1.0625rem,1rem + .4vw,1.25rem);color:var(--muted);max-width:34em}
-.hero .hero__cap{position:absolute;top:.5rem;right:.5rem;margin:0;font-size:.75rem;color:var(--text);background:rgb(251 248 242/.9);padding:.1rem .5rem;border-radius:6px}
+.hero .hero__cap{position:absolute;top:.5rem;right:.5rem;margin:0;max-width:calc(100% - 1rem);font-size:.75rem;line-height:1.35;color:var(--text);background:rgb(251 248 242/.9);padding:.1rem .5rem;border-radius:6px}
+.hero__cap a{color:inherit}
 @media (min-width:800px){
- .hero{min-height:clamp(440px,42vw,580px);display:flex;align-items:center}
- .hero__ph{position:absolute;inset:0 0 0 auto;width:min(60%,980px);height:auto;background-image:url(img/building-1600.webp);background-position:center 30%;-webkit-mask-image:linear-gradient(90deg,transparent 0,transparent 12%,#000 48%);mask-image:linear-gradient(90deg,transparent 0,transparent 12%,#000 48%)}
- .hero .wrap{margin-top:0;padding-block:2.5rem;width:100%}
+ .hero{min-height:clamp(460px,36vw,720px);display:flex;align-items:center;background:#c9c7bd url(img/street-1600.webp) center 45%/cover no-repeat}
+ .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgb(251 248 242/.95) 0,rgb(251 248 242/.9) calc(50% + .5rem),rgb(251 248 242/.62) calc(50% + 6rem),rgb(251 248 242/.25) calc(50% + 15rem),rgb(251 248 242/0) calc(50% + 25rem))}
+ .hero__ph{position:static;height:0;-webkit-mask-image:none;mask-image:none;background:none}
+ .hero .wrap{margin-top:0;padding-block:3rem;width:100%}
  .hero__card{background:none;border:0;box-shadow:none;padding:0;max-width:33rem}
- .hero h1{font-size:clamp(2rem,1.2rem + 1.6vw,2.6rem);overflow-wrap:normal}
+ .hero h1{font-size:clamp(2rem,1.2rem + 1.6vw,2.9rem);overflow-wrap:normal}
  .hero .hero__cap{top:auto;bottom:.5rem}
 }
+@media (min-width:1100px){.hero{background-image:url(img/street-1920.webp)}}
+@media (min-width:1921px),(min-width:1100px) and (min-resolution:1.5dppx){.hero{background-image:url(img/street-2560.webp)}}
+@media (max-width:799px){.hero{background:var(--bg)!important}}
 .btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.25rem}
 .btn{display:inline-flex;align-items:center;min-height:46px;padding:0 1.25rem;border-radius:999px;background:var(--brand);color:#fff;font-weight:600;text-decoration:none}
 .btn:hover{background:var(--brand-s)}
@@ -91,7 +96,7 @@ section{padding-block:clamp(1.75rem,4vw,3rem)}
 .ft{background:var(--foot);color:var(--foot-t);padding-block:1.75rem;font-size:.875rem}.ft a{color:#fff}.ft p{margin:.25rem 0}
 /* версия для слабовидящих */
 .big-mode{--fs:1.3125rem;--muted:#222a25;--line:#4f5a53}
-.big-mode body{background:#fff}.big-mode .hero{background:#fff;min-height:0;display:block}.big-mode .hero__ph{display:none}.big-mode .hero .wrap{margin-top:0;padding-top:1.5rem}.big-mode .hero__card{background:#fff;border:2px solid #000;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.big-mode body{background:#fff}.big-mode .hero{background:#fff!important;min-height:0;display:block}.big-mode .hero::before{display:none}.big-mode .hero__ph{display:none}.big-mode .hero .wrap{margin-top:0;padding-top:1.5rem}.big-mode .hero__card{background:#fff;border:2px solid #000;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
 .big-mode .ev__d{background:#000}.big-mode a{color:#000}.big-mode .tag,.big-mode .tag--alt{background:#fff;color:#000;border:1px solid #000}
 .big-mode .events,.big-mode .news{grid-template-columns:1fr}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
@@ -115,7 +120,7 @@ section{padding-block:clamp(1.75rem,4vw,3rem)}
 
 <main>
   <div class="hero">
-    <div class="hero__ph"><p class="hero__cap">Фото: здание библиотеки, ул.&nbsp;Сущевская,&nbsp;д.&nbsp;14</p></div>
+    <div class="hero__ph"><p class="hero__cap">Ул.&nbsp;Сущевская,&nbsp;д.&nbsp;14 · фото: <a href="https://commons.wikimedia.org/wiki/File:City_Estate_of_Tretyakov_Suschevskaya_St._(1).jpg" rel="noopener">ViktorJulin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" rel="license noopener">CC&nbsp;BY-SA&nbsp;4.0</a></p></div>
     <div class="wrap"><div class="hero__card">
     <h1>Библиотека искусств им.&nbsp;А.&nbsp;П.&nbsp;Боголюбова</h1>
     <p>Лекции, концерты и&nbsp;литературно-музыкальные композиции. Ближайшие события проходят в&nbsp;Детском отделе: Новослободская ул.,&nbsp;д.&nbsp;49/2.</p>
