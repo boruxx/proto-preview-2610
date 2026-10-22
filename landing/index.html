@@ -6,15 +6,14 @@
 <title>Библиотека искусств им. А. П. Боголюбова — афиша, новости, адрес</title>
 <meta name="description" content="Афиша лекций и концертов, новости, адрес и режим работы Библиотеки искусств им. А. П. Боголюбова (Москва, Новослободская ул., д. 49/2).">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#1f4d33">
+<meta name="theme-color" content="#24462b">
 <link rel="icon" href="data:,">
 <style>
-:root{--brand:#2b6a46;--brand-s:#1f4d33;--soft:#e8f0ea;--sage:#9cc3a6;--alt:#5b4b8a;--alt-bg:#efebf7;--text:#222a25;--muted:#4f5a53;--bg:#fafaf7;--paper:#fff;--cloud:#f0eee9;--line:#dcdfd9;--foot:#1e3326;--foot-t:#e6ece7;--r:12px;--w:1120px;--g:clamp(1rem,4vw,2rem);--fs:1.0625rem}
+/* палитра по фото здания (Сущевская, 14): листва, кремовый фасад, небо */
+:root{--brand:#3a6a3e;--brand-s:#24462b;--soft:#eaefe0;--sage:#a8bf8c;--alt:#36586a;--alt-bg:#e5edf0;--text:#252a22;--muted:#525a4c;--bg:#fbf8f2;--paper:#fff;--cloud:#f3ece0;--line:#e0dccf;--foot:#26321f;--foot-t:#ece7dc;--r:12px;--w:1120px;--g:clamp(1rem,4vw,2rem);--fs:1.0625rem}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:5.5rem}
-body{margin:0;font:var(--fs)/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"PT Sans",Arial,sans-serif;color:var(--text);background:var(--bg) no-repeat right top/100% auto;overflow-wrap:break-word}
-@media (max-width:799px){body{background-image:url(img/bg-800.webp)}}
-@media (min-width:800px){body{background-image:url(img/bg-1600.webp);background-size:min(1600px,100%) auto}}
+body{margin:0;font:var(--fs)/1.55 system-ui,-apple-system,"Segoe UI",Roboto,"PT Sans",Arial,sans-serif;color:var(--text);background:var(--bg);overflow-wrap:break-word}
 img{display:block;max-width:100%;height:auto}
 h1,h2,h3,h4{line-height:1.2;margin:0 0 .75rem;color:var(--brand-s);text-wrap:balance}
 p{margin:0 0 .75rem;text-wrap:pretty}
@@ -33,10 +32,22 @@ a:hover{text-decoration-thickness:2px}
 .tel{font-weight:600;white-space:nowrap;text-decoration:none}
 .a11y{font:inherit;font-size:.875rem;min-height:36px;padding:0 .8rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--brand-s);cursor:pointer}
 @media (max-width:719px){.hd .wrap{padding-block:.4rem .2rem}.logo img{width:124px}.tel{display:none}.nav{order:3;width:100%;justify-content:space-between;margin:0 -.7rem}.a11y{font-size:.8125rem}}
-/* первый экран */
-.hero{padding-block:clamp(2rem,6vw,4.5rem) clamp(1.5rem,4vw,3rem)}
+/* первый экран: фото здания библиотеки (Сущевская, 14) */
+.hero{position:relative;background:var(--bg)}
+.hero__ph{height:clamp(240px,62vw,340px);background:#d9d3c4 url(img/building-800.webp) center 15%/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
+.hero .wrap{position:relative;margin-top:-3.5rem;padding-bottom:clamp(1.25rem,4vw,2.5rem)}
+.hero__card{max-width:36rem;padding:clamp(1.1rem,3vw,2rem);background:rgb(251 248 242/.94);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 30px rgb(38 50 31/.12)}
 .hero h1{font-size:clamp(1.75rem,1.2rem + 2.4vw,2.9rem);max-width:15em}
 .hero p{font-size:clamp(1.0625rem,1rem + .4vw,1.25rem);color:var(--muted);max-width:34em}
+.hero .hero__cap{position:absolute;top:.5rem;right:.5rem;margin:0;font-size:.75rem;color:var(--text);background:rgb(251 248 242/.9);padding:.1rem .5rem;border-radius:6px}
+@media (min-width:800px){
+ .hero{min-height:clamp(440px,42vw,580px);display:flex;align-items:center}
+ .hero__ph{position:absolute;inset:0 0 0 auto;width:min(60%,980px);height:auto;background-image:url(img/building-1600.webp);background-position:center 30%;-webkit-mask-image:linear-gradient(90deg,transparent 0,transparent 12%,#000 48%);mask-image:linear-gradient(90deg,transparent 0,transparent 12%,#000 48%)}
+ .hero .wrap{margin-top:0;padding-block:2.5rem;width:100%}
+ .hero__card{background:none;border:0;box-shadow:none;padding:0;max-width:33rem}
+ .hero h1{font-size:clamp(2rem,1.2rem + 1.6vw,2.6rem);overflow-wrap:normal}
+ .hero .hero__cap{top:auto;bottom:.5rem}
+}
 .btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.25rem}
 .btn{display:inline-flex;align-items:center;min-height:46px;padding:0 1.25rem;border-radius:999px;background:var(--brand);color:#fff;font-weight:600;text-decoration:none}
 .btn:hover{background:var(--brand-s)}
@@ -80,11 +91,11 @@ section{padding-block:clamp(1.75rem,4vw,3rem)}
 .ft{background:var(--foot);color:var(--foot-t);padding-block:1.75rem;font-size:.875rem}.ft a{color:#fff}.ft p{margin:.25rem 0}
 /* версия для слабовидящих */
 .big-mode{--fs:1.3125rem;--muted:#222a25;--line:#4f5a53}
-.big-mode body{background-image:none;background-color:#fff}
+.big-mode body{background:#fff}.big-mode .hero{background:#fff;min-height:0;display:block}.big-mode .hero__ph{display:none}.big-mode .hero .wrap{margin-top:0;padding-top:1.5rem}.big-mode .hero__card{background:#fff;border:2px solid #000;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
 .big-mode .ev__d{background:#000}.big-mode a{color:#000}.big-mode .tag,.big-mode .tag--alt{background:#fff;color:#000;border:1px solid #000}
 .big-mode .events,.big-mode .news{grid-template-columns:1fr}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-@media print{.hd,.btns,.a11y{display:none}body{background:none}}
+@media print{.hd,.btns,.a11y,.hero__cap{display:none}body,.hero{background:none}.hero__ph{display:none}}
 </style>
 </head>
 <body>
@@ -103,10 +114,13 @@ section{padding-block:clamp(1.75rem,4vw,3rem)}
 </header>
 
 <main>
-  <div class="wrap hero">
+  <div class="hero">
+    <div class="hero__ph"><p class="hero__cap">Фото: здание библиотеки, ул.&nbsp;Сущевская,&nbsp;д.&nbsp;14</p></div>
+    <div class="wrap"><div class="hero__card">
     <h1>Библиотека искусств им.&nbsp;А.&nbsp;П.&nbsp;Боголюбова</h1>
     <p>Лекции, концерты и&nbsp;литературно-музыкальные композиции. Ближайшие события проходят в&nbsp;Детском отделе: Новослободская ул.,&nbsp;д.&nbsp;49/2.</p>
     <div class="btns"><a class="btn" href="#afisha">Смотреть афишу</a><a class="btn btn--o" href="#address">Адрес и&nbsp;режим работы</a></div>
+    </div></div>
   </div>
 
   <section id="afisha" aria-labelledby="afisha-h">
